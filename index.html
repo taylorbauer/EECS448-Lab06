@@ -31,9 +31,9 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
  <div class="jumbotron">
     <h1 class="display-4">Lawrence Bus Stops</h1>
-    <p class="lead">My name is Taylor and I am super glad you're here</p>
+    <p class="lead">For all your latest bus stop needs</p>
     <hr class="my-4">
-    <p>For all your latest bus stop needs</p>
+    <p>Select the number of stops below, and they will display in order of ascending distance from you.  A tool by Taylor Bauer to practice with Vue.js and Bootstrap.</p>
 
   </div>
 
@@ -41,14 +41,14 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
   <div id="app">
     <p>Select the number of stops to display: <input v-model.number="numStops" type="number"></p>
 
-    <ul v-for="stop in filteredStops"> 
+    <span v-for="stop in filteredStops"> 
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">{{ stop.name }}</h5>
               <p class="card-text">{{ stop.description }}<br>Distance: {{ stop.distance }} mi.</p>
             </div>
           </div>
-    </li>
+        </span>
   </div>
   
 
